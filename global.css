@@ -14,14 +14,20 @@
 
 
 :root {
-    --blue: rgb(40, 30, 180);
+    --blue: rgb(29, 161, 242);
+    --black : rgb(20 ,23 ,26);
+    --darkGrey: rgb(101 119 134);
+    --lightGrey : rgb(170 ,184, 194);
+    --extraLightGrey : rgb(245, 248, 250);
 }
 
 body {
-    color: var(--blue)
+    color: var(--black)
 }
 
 header {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    
+
 }
 
