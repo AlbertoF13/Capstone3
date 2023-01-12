@@ -29,3 +29,32 @@ function postTemplate() {
     </div>
     `
 }
+
+function createApost () {
+
+let myHeaders = new Headers();
+myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY3MzU0NzU2NywiZXhwIjoxNjczNjMzOTY3fQ.TunwcsHEGddhPIngJjLN1TycAXfPY2sG1SfvC-eDiAc");
+myHeaders.append("Content-Type", "application/json");
+
+let raw = JSON.stringify({
+  text: document.getElementById("postArea").value,
+});
+console.log(raw)
+
+
+let requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
+
+fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+};
+
+createApost()
+
