@@ -22,7 +22,8 @@
 }
 
 body {
-    color: var(--black)
+    color: var(--black);
+    font-family: 'Robot', sans-serif;
 }
 
 header {
@@ -30,4 +31,14 @@ header {
     
 
 }
+
+#buttons {
+    color: var();
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
 
