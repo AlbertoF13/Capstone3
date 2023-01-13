@@ -25,21 +25,29 @@
             <div class="forms signup"> 
             <div class="content-info">
                 <header> Create Account</header>
-
+<div class="line"></div> <br> 
 
 <!-- leave space for account email or facebook ect -->
-
-<!--USERNAME-->
-                <form class="forms2">
+<form id="registertrationForm">
+                     
+<!--Full Name-->             
                     <div class=" file input-field">
-                        <input type="text" id="username" placeholder="Username" class="input"> 
+                        <input type="text" id="fullname" placeholder="First" class="input">
+                        <i class='bx bx-check-circle check-icon'></i>
+                        <i class='bx bx-alarm-exclamation alarm-icon'></i>
+                        <p> Error Message</p>
+                        </div>
+<!--Last Name -->
+                        <div class=" file input-field">
+                        <input type="text" id="fullname" placeholder="Last Name" class="input">
                         <i class='bx bx-check-circle check-icon'></i>
                         <i class='bx bx-alarm-exclamation alarm-icon'></i>
                         <p> Error Message</p>
                     </div>
-<!--EMAIL-->             
+                    
+<!--USERNAME-->                  
                     <div class=" file input-field">
-                        <input type="email" id="email" placeholder="Email" class="input">
+                        <input type="text" id="username" placeholder="Username" class="input"> 
                         <i class='bx bx-check-circle check-icon'></i>
                         <i class='bx bx-alarm-exclamation alarm-icon'></i>
                         <p> Error Message</p>
@@ -59,13 +67,18 @@
                         <p> Error Message</p>
                     </div>
                    
-                    <div class=" file button-field">
-                        <button>Signup</button>
-
-                        <div class="form-link"> 
+                    <br> 
 
                            <span> Already a member? <a href="login1.html" class="signup-link">Login</a> </span>
-                           
+                           <br> 
+                           <br>
+                           <h6> People who use our service may have uploaded your contact information to CRUD.COM. Learn more.</h6>
+                           <br> 
+<h6>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy.</h6>
+                            <div class=" file button-field">
+                                <button>Signup</button>
+        
+                                <div class="form-link"> 
                         </div>
                     </div>
 

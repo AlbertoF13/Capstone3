@@ -1,44 +1,44 @@
-const form = document.querySelector('.forms2');
-
-
-//const usernameInput = document.querySelector('#username');
-//const emailInput = document.querySelector('#email');
-//const passwordInput = document.querySelector('#password');
+const form = document.getElementById('registertrationForm')
 
 
 
-form.addEventListner('submit', (event) => {
-    event.preventDefault();
- // Prevent the form from submmiting 
-  
-    const formData = new FormData(this);
-// getting the form data
-    fetch('https://microbloglite.herokuapp.com',{
-        method: 'post',
-        body: formData
 
-}) .then(function (response) {
 
-    return response.text();
 
-}).then(function(text) {
+
+function registerUser(event) 
+{
+ 
+
+const usernameInput = document.getElementById('username').value;
+const fullnameInput = document.getElementById('fullname').value;
+const passwordInput = document.getElementById('password').value; 
     
-    console.log(text);
-}).catch(function(error) {
+event.preventDefault();
 
-})
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
-})
+var raw = JSON.stringify({
+  "username": usernameInput,
+  "fullName": fullnameInput,
+  "password": passwordInput,
+});
 
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
 
-.then((data) => {
-    // Save the token in local storage
-    localStorage.setItem('token', data.token);
-    // redirect the user to the login page
-    window.location.href = '/login';
-
-
-
-    //ValidateForm();
-    // Have the form Validate Users account info 
-})
+fetch("https://microbloglite.herokuapp.com/api/users", requestOptions)
+  .then(response => response.text())
+  .then(result => 
+    {
+        alert(result);
+        console.log(result);
+    }
+  )
+}
+form.addEventListener('submit',  registerUser)
