@@ -30,10 +30,14 @@ function postTemplate() {
     `
 }
 
+
 function createApost () {
 
+ 
+const token = getLoginData() 
+console.log(token.token)
 let myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InN0cmluZyIsImlhdCI6MTY3MzU0NzU2NywiZXhwIjoxNjczNjMzOTY3fQ.TunwcsHEGddhPIngJjLN1TycAXfPY2sG1SfvC-eDiAc");
+myHeaders.append("Authorization", "Bearer " + token.token);
 myHeaders.append("Content-Type", "application/json");
 
 let raw = JSON.stringify({
@@ -57,4 +61,6 @@ fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions)
 };
 
 createApost()
+
+
 
