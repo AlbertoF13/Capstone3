@@ -7,17 +7,16 @@ function postTemplate(post) {
     <div class="card">
     <div class="card-content">
         <div class="media-content">
-            <p class="title is-4">John Smith</p>
+            <p class="title is-4"></p>
             <p class="subtitle is-6">@${post.username}</p>
         </div>
         </div>
 
         <div class="content">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Phasellus nec iaculis mauris. <a>@bulmaio</a>.
+        <p>${post.text}</p>.
         <a href="#">#css</a> <a href="#">#responsive</a>
         <br>
-        <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        <time datetime="2016-1-1">${post.createdAt}</time>
         </div>
     </div>
     </div>
@@ -43,7 +42,7 @@ function callApi(){
     .catch(error => console.log('error', error));
 }
 
-const limit = 2;
+const limit = 1000;
 const offset = 0;
 
 function callApi2() {
@@ -55,6 +54,6 @@ function callApi2() {
         }
     })
     .then(response => response.json())
-    .then(result => document.getElementById("div").innerHTML = result.map(postTemplate).join(" "))
+    .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
     .catch(error => console.log("error", error));
 }
