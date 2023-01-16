@@ -14,7 +14,7 @@
     justify-content: center;
     background-color: #E1E8ED;
 }
-
+/* Form below for login*/
 .forms{
     width: 450px;
     height: 430px;
@@ -25,6 +25,7 @@
     border-radius: 10px;
     padding: 50px;
 }
+
 
 header{
     font-size: 38px;
@@ -61,30 +62,6 @@ form .file {
     border: 2px solid #CACACA; 
     }
 
-
-
-.alarm-icon{
-    position: absolute;
-    font-size: 15px;
-    top: 35px;
-    right: 10px;
-    visibility: hidden;
-}
-.check-icon{
-    position: absolute;
-    font-size: 15px;
-    top: 35px;
-    right: 10px;
-    visibility: hidden;
-}
-
-.eye-icon{
-    position: absolute;
-    font-size: 19px;
-    top: 24px;
-    right: 15px;
-    
-}
 p {
     font-size: 15px;
     color: red; 
@@ -148,6 +125,30 @@ font-size: 15px;
 border-top: 1px solid #AAB8C2 ;
 opacity: 1;
 }
+/* Box icons*/
+.alarm-icon{
+    position: absolute;
+    font-size: 15px;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+}
+.check-icon{
+    position: absolute;
+    font-size: 15px;
+    top: 35px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.eye-icon{
+    position: absolute;
+    font-size: 19px;
+    top: 24px;
+    right: 15px;
+    
+}
+/* Logo CSS for Login*/
 .Crud-container{
     width: 0;
    position: absolute;
@@ -158,8 +159,21 @@ opacity: 1;
 .Crud-container img{
     width: 420px;
 }
+
 p-logo{
     color: black;
     font-size: 30px;
     font-weight:  60px;
+}
+   
+/* Form below for reg*/
+.form{
+    width: 450px;
+    height: 600px;
+    position: center;
+    top: 20%;
+    left: 57%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 50px;
 }
