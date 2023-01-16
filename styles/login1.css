@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container{
@@ -12,22 +12,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1DA1F2;
+    background-color: #E1E8ED;
 }
 
 .forms{
-    max-width: 400px;
-    width: 100%;
-    padding: 50px;
-    border-radius: 10px;
+    width: 450px;
+    height: 430px;
+    position: absolute;
+    top: 20%;
+    left: 57%;
     background-color: white;
+    border-radius: 10px;
+    padding: 50px;
 }
 
 header{
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 550;
     color: #14171A;
     text-align: center;
+    
 
 }
 form{
@@ -36,25 +40,27 @@ form{
 }
 
 form .file {
+    
     position: relative;
-    height: 42px;
+    height: 40px;
     width: 100%;
-    margin-top: 18px;
+    margin-top: 15px;
 
 }
-.file input, .file button{
-    height: 100%;
+.file input, .file button {
+    height: 120%;
     width: 100%;
-    font-size: 20px;
+    font-size: 17px;
     border: none;
-    border-radius: 7px;
-    font-weight: 400;
+    border-radius: 8px;
+    font-weight: 500;
 
 }
 .file input{
-padding: 0 15px;
-border: 2px solid #CACACA; 
-}
+    padding: 0 15px;
+    border: 2px solid #CACACA; 
+    }
+
 
 
 .alarm-icon{
@@ -71,6 +77,14 @@ border: 2px solid #CACACA;
     right: 10px;
     visibility: hidden;
 }
+
+.eye-icon{
+    position: absolute;
+    font-size: 19px;
+    top: 24px;
+    right: 15px;
+    
+}
 p {
     font-size: 15px;
     color: red; 
@@ -78,6 +92,8 @@ p {
 }
 
 .file button{
+    margin-top: 22px;
+    font-size: 20px;
     color: whitesmoke;
     background-color: #1DA1F2;
     cursor: pointer;
@@ -92,7 +108,34 @@ p {
     font-size: 19px;
     font-weight: 400;
 }
+.link1 {
+text-align: center;
+margin-top: 25px;
+}
 
+.link1 a { 
+text-decoration: none;
+color: #1DA1F2;
+font-size: 15px;
+}
+
+.link2 {
+    width: 55%;
+    margin: 20%;
+    text-align:center;
+    margin-top: 7px;
+    background-color:#36A420;
+    padding: 5px;
+    border-radius: 8px;
+   
+}
+
+.link2 a{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+    transition: all ease-in-out;
+ }
 .file a{
     text-decoration: none;
     color: #14171A;
@@ -102,20 +145,20 @@ p {
     color: #14171A;
 }
 .line{
-border-top: 2px solid  #14171A;
+border-top: 1px solid #AAB8C2 ;
 opacity: 1;
 }
-
-
 .Crud-container{
-    width: 100px;
-    margin-left: 300px; 
-    margin-top: 30vh;
+    width: 0;
+   position: absolute;
+   top: 30%;
+   left: 14%;
+   font-size: 25px;
 }
 .Crud-container img{
-    width: 250px;
+    width: 420px;
 }
-p{
+p-logo{
     color: black;
     font-size: 30px;
     font-weight:  60px;

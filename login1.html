@@ -11,6 +11,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/login1.css">
+    <!--Fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <title>Login to the Microblog Network!</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
@@ -26,35 +30,42 @@
 
 
 
-        
+          <!--Image below-->
+          <div class="Crud-container">
+            <img src="images/crud logo 2 2.png" alt="CRUD">
 
-        <section class="container account"> 
+        <p class="p-logo"> Leave for comment on post </p>
+          
+        </div>
 
-            
-            <div class="forms login">
+<!--Form for Login -->
+            <header class="container account">
+                    <div class="forms login">   
+                    <div class="content-info">
            
-             
-            <div class="content-info">
-                <header> Login</header>
 
-                <form action="#">
+                    <form action="#">
                     <div class=" file input-field">
                         <input type="email" placeholder="Email" class="input"> 
                     </div>
                     <div class=" file input-field">
                         <input type="password" placeholder="Password" class="password" minlength="6">
-                        <i class='bx bx-hide icon'></i>
-                    </div>
-                    <div class="form-link"> 
-                        <a href="" class="forgot-password">Forgot password? </a>
+                        <i class='bx bx-hide icon eye-icon'></i>
                     </div>
 
                     <div class=" file button-field">
                         <button>Login</button>
+                    </div>
+                        <div class="link1"> 
+                            <a href="#" >Forgot password? </a>
+                        </div>
+<!--Password -->
                         <div class="form-link">
                             <div class="line"></div> <br>  
-
-                           <span> Don't have an account?  <a href="registration.html" class="link login-link">Signup</a> </span>
+<!--Create New Account-->
+                     <div class="link2">
+                            <a href="registration.html"> Create New Account </a>
+                           </div>
                         <!-- below will go gmail and facebook-->
                         </div>
                     </div>
@@ -63,20 +74,15 @@
                
             </div>
             </div>
-            <!--Image below-->
-            <div class="Crud-container">
-                <img src="images/crud logo 2 2.png" alt="CRUD">
-            <p> Leave for comment on post info</p>
-                
-            </div>
+  </header>
             
 
 
-        </section>
+     
         
 
 
 
-        <script src="scripts/login.js" async defer></script>
+  <script src="/scripts/landing.js"></script>
     </body>
 </html>
