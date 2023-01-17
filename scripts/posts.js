@@ -1,6 +1,57 @@
 /* Posts Page JavaScript */
-
 "use strict";
+callApi2()
+
+class Posts {
+    constructor() {
+        this.posts = []
+    }
+
+    getPosts(limit , offset) {
+        const { token } = getLoginData();
+        fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`
+        }
+        })
+        .then(response => response.json())
+        .then(result => result.forEach(post => this.posts.push(new Post(post._id , post.text , post.username , post.createdAt , post.likes))))
+        .catch(error => console.log("error", error));
+    }
+
+    displayPosts() {
+        // document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
+        console.log(this.posts)
+    }
+}
+
+class Post {
+
+    constructor(id , text , username , createdAt , likes) {
+        this.id = id
+        this.text = text
+        this.username = username
+        this.createdAt =createdAt
+        this.likes = likes
+    }
+
+    like() {
+        //todo
+    }
+
+    unlike() {
+        //todo
+    }
+
+    post() {
+        //todo
+    }
+
+}
+
+
+
 
 function postTemplate(post) {
     return `
@@ -14,7 +65,6 @@ function postTemplate(post) {
 
         <div class="content">
         <p>${post.text}</p>.
-        <a href="#">#css</a> <a href="#">#responsive</a>
         <br>
         <time datetime="2016-1-1">${post.createdAt}</time>
         </div>
@@ -23,29 +73,9 @@ function postTemplate(post) {
     `
 }
 
-function callApi(){
-
-    const loginData = getLoginData()
-    console.log(loginData.token)
-    let myHeaders = new Headers();
-    myHeaders.append("Authorization", `Bearer ${loginData.token}`);
-
-    let requestOptions = {
-        method: 'GET',
-        headers: myHeaders,
-        redirect: 'follow'
-    };
-
-    fetch("https://microbloglite.herokuapp.com/api/posts?limit=2&offset=0", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
-}
-
-const limit = 1000;
-const offset = 0;
-
 function callApi2() {
+    const limit = 1000;
+    const offset = 0;
     const { token } = getLoginData();
     fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
         method: "GET",
@@ -57,3 +87,34 @@ function callApi2() {
     .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
     .catch(error => console.log("error", error));
 }
+
+let allposts = new Posts()
+allposts.getPosts(1000 , 0)
+console.log(allposts.posts)
+allposts.displayPosts()
+
+
+// post() {
+    //         const token = getLoginData() //functional password
+    
+    //         let myHeaders = new Headers(); //a class
+    //         myHeaders.append("Authorization", "Bearer " + token.token); //giving the password 
+    //         myHeaders.append("Content-Type", "application/json"); //selecting the type of file (JSON)
+            
+    //         let raw = JSON.stringify({
+    //         text: document.getElementById("postArea").value,
+    //         }); //document translated from JSON and written in JS (that's what stringfy do) and displayed in the text area called "postArea"
+            
+    //         let requestOptions = {
+    //         method: 'POST',
+    //         headers: myHeaders,
+    //         body: raw,
+    //         redirect: 'follow'
+    //         }; //writing required information to fetch
+            
+    //         fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions) //sending the information
+    //         .then(response => response.json()) //getting the promisse
+    //         .then(result => console.log(result)) 
+    //         .catch(error => console.log('error', error));
+            
+    //     } //end of post method

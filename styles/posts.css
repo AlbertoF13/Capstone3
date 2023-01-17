@@ -1,1 +1,9 @@
 /* Posts Page CSS */
+
+
+card{
+    margin: 40px;
+}
+.media-content {
+    color: aqua !important;
+}
