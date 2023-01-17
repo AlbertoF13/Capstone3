@@ -33,34 +33,31 @@ function postTemplate() {
 
 function createApost () {
 
- 
-const token = getLoginData() 
-console.log(token.token)
-let myHeaders = new Headers();
-myHeaders.append("Authorization", "Bearer " + token.token);
-myHeaders.append("Content-Type", "application/json");
+  const token = getLoginData() 
+  console.log(token.token)
+  let myHeaders = new Headers();
+  myHeaders.append("Authorization", "Bearer " + token.token);
+  myHeaders.append("Content-Type", "application/json");
 
-let raw = JSON.stringify({
-  text: document.getElementById("postArea").value,
-});
-console.log(raw)
+  let raw = JSON.stringify({
+    text: document.getElementById("postArea").value,
+  });
+  console.log(raw)
 
 
-let requestOptions = {
-  method: 'POST',
-  headers: myHeaders,
-  body: raw,
-  redirect: 'follow'
-};
+  let requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
 
-fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  fetch("https://microbloglite.herokuapp.com/api/posts", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
 
-};
-
-createApost()
+}
 
 
 
