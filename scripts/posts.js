@@ -1,6 +1,6 @@
 /* Posts Page JavaScript */
 "use strict";
-callApi2()
+// callApi2()
 
 class Posts {
     constructor() {
@@ -16,13 +16,17 @@ class Posts {
         }
         })
         .then(response => response.json())
-        .then(result => result.forEach(post => this.posts.push(new Post(post._id , post.text , post.username , post.createdAt , post.likes))))
+        .then(result => result.forEach(post => this.posts.push(new Post(post._id , post.text , post.username , post.createdAt , post.likes)
+        )
+        )
+        )
         .catch(error => console.log("error", error));
     }
 
-    displayPosts() {
+    displayPosts(mypost) {
         // document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
-        console.log(this.posts)
+
+        console.log(this.posts.map(post => console.log(post)));
     }
 }
 
@@ -49,8 +53,6 @@ class Post {
     }
 
 }
-
-
 
 
 function postTemplate(post) {
