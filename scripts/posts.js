@@ -79,6 +79,10 @@ allposts.getPosts(1000 , 0)
 console.log(allposts.posts)
 
 
+
+
+
+
 // function callApi2() {
 //     const limit = 1000;
 //     const offset = 0;
@@ -93,6 +97,12 @@ console.log(allposts.posts)
 //     .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
 //     .catch(error => console.log("error", error));
 // }
+
+
+
+
+
+
 
 // post() {
     //         const token = getLoginData() //functional password
