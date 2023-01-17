@@ -58,19 +58,21 @@ callApi2()
 function postTemplate(post) {
     return `
     <div class="card">
-    <div class="card-content">
-        <div class="media-content">
-            <p class="title is-4"></p>
-            <p class="subtitle is-6">@${post.username}</p>
-        </div>
-        </div>
+        <div class="card-content">
+            <div class="media-content">
+                <p class="title is-4"></p>
+                <p class="subtitle is-6">@${post.username}</p>
+            </div>
+            </div>
 
-        <div class="content">
-        <p>${post.text}</p>.
-        <br>
-        <time datetime="2016-1-1">${post.createdAt}</time>
+            <div class="content">
+            <p>${post.text}</p>.
+            <br>
+            <!-- create a button here -->
+            </br>
+            <time datetime="2016-1-1">${post.createdAt}</time>
+            </div>
         </div>
-    </div>
     </div>
     `
 }
