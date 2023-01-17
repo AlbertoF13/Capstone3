@@ -1,58 +1,55 @@
 /* Posts Page JavaScript */
 "use strict";
-callApi2()
+// callApi2()
 
-// class Posts {
-//     constructor() {
-//         this.posts = []
-//     }
+class Posts {
+    constructor() {
+        this.posts = []
+    }
 
-//     getPosts(limit , offset) {
-//         const { token } = getLoginData();
-//         fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
-//             method: "GET",
-//             headers: {
-//                 Authorization: `Bearer ${token}`
-//         }
-//         })
-//         .then(response => response.json())
-//         .then(result => result.forEach(post => this.posts.push(new Post(post._id , post.text , post.username , post.createdAt , post.likes)
-//         )
-//         )
-//         )
-//         .catch(error => console.log("error", error));
-//     }
+    getPosts(limit , offset) {
+        const { token } = getLoginData();
+        fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`
+        }
+        })
+        .then(response => response.json())
+        .then(result => {result.forEach(post => this.posts.push(new Post(post._id , post.text , post.username , post.createdAt , post.likes)))})
+        .then(result => this.displayPosts())
+        .catch(error => console.log("error", error));
+    }
 
-//     displayPosts(mypost) {
-//         // document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
+    displayPosts(mypost) {
+        document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
+        console.log(this.posts[0]);
+    }
+}
 
-//         console.log(this.posts.map(post => console.log(post)));
-//     }
-// }
+class Post {
 
-// class Post {
+    constructor(id , text , username , createdAt , likes) {
+        this.id = id
+        this.text = text
+        this.username = username
+        this.createdAt =createdAt
+        this.likes = likes
+    }
 
-//     constructor(id , text , username , createdAt , likes) {
-//         this.id = id
-//         this.text = text
-//         this.username = username
-//         this.createdAt =createdAt
-//         this.likes = likes
-//     }
+    like() {
+        //todo
+    }
 
-//     like() {
-//         //todo
-//     }
+    unlike() {
+        //todo
+    }
 
-//     unlike() {
-//         //todo
-//     }
+    post() {
+        //todo
+    }
 
-//     post() {
-//         //todo
-//     }
-
-// }
+}
 
 
 function postTemplate(post) {
@@ -77,26 +74,25 @@ function postTemplate(post) {
     `
 }
 
-function callApi2() {
-    const limit = 1000;
-    const offset = 0;
-    const { token } = getLoginData();
-    fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
-        method: "GET",
-        headers: {
-            Authorization: `Bearer ${token}`
-        }
-    })
-    .then(response => response.json())
-    .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
-    .catch(error => console.log("error", error));
-}
+let allposts = new Posts()
+allposts.getPosts(1000 , 0)
+console.log(allposts.posts)
 
-// let allposts = new Posts()
-// allposts.getPosts(1000 , 0)
-// console.log(allposts.posts)
-// allposts.displayPosts()
 
+// function callApi2() {
+//     const limit = 1000;
+//     const offset = 0;
+//     const { token } = getLoginData();
+//     fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
+//         method: "GET",
+//         headers: {
+//             Authorization: `Bearer ${token}`
+//         }
+//     })
+//     .then(response => response.json())
+//     .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
+//     .catch(error => console.log("error", error));
+// }
 
 // post() {
     //         const token = getLoginData() //functional password
