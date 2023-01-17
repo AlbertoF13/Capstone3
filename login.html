@@ -19,18 +19,6 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-
-
-
-
-
-
-
-
-
-
-
-
           <!--Image below-->
           <div class="Crud-container">
             <img src="images/crud logo 2 2.png" alt="CRUD">
@@ -47,15 +35,15 @@
             
                     <form id="login" action="#">
                     <div class=" file input-field">
-                        <input type="text" placeholder="Username" class="input"> 
+                        <input type="text" id="username" placeholder="Username" class="input" minlength="3"> 
                     </div>
                     <div class=" file input-field">
-                        <input type="password" placeholder="Password" class="password" minlength="6">
+                        <input type="password" id="password" placeholder="Password" class="password" minlength="6">
                         <i class='bx bx-hide icon eye-icon'></i>
                     </div>
 
                     <div class=" file button-field">
-                        <button>Login</button>
+                        <button id="loginButton" type="submit">Login</button>
                     </div>
                         <div class="link1"> 
                             <a href="#" >Forgot password? </a>
@@ -76,14 +64,7 @@
             </div>
             </div>
   </header>
-            
-
-
-     
-        
-
-
-
+  
   <script src="/scripts/landing.js"></script>
     </body>
 </html>
