@@ -6,7 +6,7 @@ const form = document.querySelector('.forms');
 
 loginForm.onsubmit = function (event) {
     // Prevent the form from refreshing the page,
-    // as it will do by default when the Submit event is triggered:
+    // as it will do by default when the blank Submit event is triggered:
     event.preventDefault();
 
     // We can use loginForm.username (for example) to access

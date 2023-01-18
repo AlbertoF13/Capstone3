@@ -57,3 +57,4 @@ function callApi2() {
     .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
     .catch(error => console.log("error", error));
 }
+
