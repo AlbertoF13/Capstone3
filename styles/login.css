@@ -62,11 +62,7 @@ form .file {
     border: 2px solid #CACACA; 
     }
 
-p {
-    font-size: 15px;
-    color: red; 
-    visibility: hidden;
-}
+
 
 .file button{
     margin-top: 22px;
