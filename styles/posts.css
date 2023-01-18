@@ -1,5 +1,19 @@
 /* Posts Page CSS */
+
+body {
+    background-color: #AAB8C2;
+}
+
+.navbar {
+    background-color: #AAB8C2;;
+    padding: 10px;
+}
+
 .card {
-    background-color: aqua;
-    margin-bottom: 30px ;
+    background-color: #F5F8FA;
+    margin: 30px  200px;
+}
+
+.button {
+    background-color: #1DA1F2;
 }

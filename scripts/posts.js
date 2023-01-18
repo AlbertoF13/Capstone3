@@ -23,7 +23,6 @@ class Posts {
 
     displayPosts(mypost) {
         document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
-        console.log(this.posts[0]);
     }
 }
 
@@ -38,11 +37,16 @@ class Post {
     }
 
     like() {
-        //todo
+        return console.log(this.id)
     }
 
     unlike() {
         //todo
+    }
+
+    numberOfLikes() {
+        // console.log(this.likes.length)
+        return this.likes.length
     }
 
     post() {
@@ -63,7 +67,7 @@ function postTemplate(post) {
             </div>
 
             <div class="content">
-            <p>${post.text}</p>.
+            <p>${post.text}</p>
             <br>
             <!-- create a button here -->
             </br>
@@ -76,7 +80,7 @@ function postTemplate(post) {
 
 let allposts = new Posts()
 allposts.getPosts(1000 , 0)
-console.log(allposts.posts)
+console.log(allposts.likes)
 
 
 

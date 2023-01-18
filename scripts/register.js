@@ -4,8 +4,6 @@ function registerUser(event) {
   const usernameInput = document.getElementById('username').value;
   const fullnameInput = document.getElementById('fullname').value;
   const passwordInput = document.getElementById('password').value; 
-      
-  event.preventDefault();
 
   let myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
