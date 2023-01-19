@@ -150,7 +150,7 @@ opacity: 1;
 }
 /* Logo CSS for Login*/
 .Crud-container{
-    width: 0;
+   
    position: absolute;
    top: 30%;
    left: 14%;
@@ -160,7 +160,7 @@ opacity: 1;
     width: 420px;
 }
 
-p-logo{
+.p-logo{
     color: black;
     font-size: 30px;
     font-weight:  60px;

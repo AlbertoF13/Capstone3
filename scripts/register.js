@@ -8,7 +8,7 @@ const usernameInput = document.getElementById('username').value;
 const fullnameInput = document.getElementById('fullname').value;
 const passwordInput = document.getElementById('password').value; 
     
-event.preventDefault();
+// event.preventDefault();
 
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
@@ -32,6 +32,7 @@ fetch("https://microbloglite.herokuapp.com/api/users", requestOptions)
     {
         alert(result);
         console.log(result);
+        window.location.href="login.html"
     }
   )
 }
@@ -40,3 +41,4 @@ form.addEventListener('submit',  registerUser)
 const usernameInput = document.getElementById('username').value;
 const fullnameInput = document.getElementById('fullname').value;
 const passwordInput = document.getElementById('password').value; 
+
