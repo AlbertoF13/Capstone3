@@ -62,11 +62,7 @@ form .file {
     border: 2px solid #CACACA; 
     }
 
-p {
-    font-size: 15px;
-    color: red; 
-    visibility: hidden;
-}
+
 
 .file button{
     margin-top: 22px;
@@ -150,7 +146,7 @@ opacity: 1;
 }
 /* Logo CSS for Login*/
 .Crud-container{
-    width: 0;
+    
    position: absolute;
    top: 30%;
    left: 14%;
@@ -160,10 +156,13 @@ opacity: 1;
     width: 420px;
 }
 
-p-logo{
+.p-logo{
     color: black;
     font-size: 30px;
     font-weight:  60px;
+    width: 550px;
+    padding-top: 60px ;
+
 }
    
 /* Form below for reg*/

@@ -45,6 +45,19 @@ function callApi(){
 const limit = 1000;
 const offset = 0;
 
+// function callApi2() {
+//     const { token } = getLoginData();
+//     fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
+//         method: "GET",
+//         headers: {
+//             Authorization: `Bearer ${token}`
+//         }
+//     })
+//     .then(response => response.json())
+//     .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
+//     .catch(error => console.log("error", error));
+// }
+
 function callApi2() {
     const { token } = getLoginData();
     fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
@@ -54,7 +67,11 @@ function callApi2() {
         }
     })
     .then(response => response.json())
-    .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
+    .then(result => {
+        result.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        document.getElementById("post").innerHTML = result.map(postTemplate).join(" ");
+    })
     .catch(error => console.log("error", error));
 }
+
 
