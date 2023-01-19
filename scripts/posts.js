@@ -23,6 +23,11 @@ class Posts {
 
     displayPosts(mypost) {
         document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
+        this.posts.map(post => {
+            let currentpost = document.getElementById(post.id)
+            console.log(post)
+            currentpost.addEventListener("click" , function() {post.like()})
+        })
     }
 }
 
@@ -82,26 +87,21 @@ function postTemplate(post) {
             </div>
 
             <div class="content">
-            <p>${post.text}</p>
+            <p>${post.text} - ${post.id}</p>
             <br>
             <button id="${post.id}">Like</button>
+           
             </br>
             <time datetime="2016-1-1">${post.createdAt}</time>
             </div>
         </div>
     </div>
     `
-    const currentpost = document.getElementById(post.id)
-    // .addEventListener("click" , function(){
-    //     console.log(post.id)
-    console.log(currentpost)
-    // })
-    return template
+   return template
 }
 
 let allposts = new Posts()
 allposts.getPosts(1000 , 0)
-console.log(allposts.likes)
 
 // let singlepost = new Post()
 // singlepost.like()

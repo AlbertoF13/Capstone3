@@ -22,7 +22,7 @@
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/scripts/auth.js"></script>
     <script>
-        if (isLoggedIn() === false) window.location.replace("/");
+       if (isLoggedIn() === false) window.location.replace("/");
     </script>
 </head>
 <body>
@@ -88,6 +88,10 @@
 
     <main>
       <!-- <button onclick="callApi2()"> call </button> -->
+     
+     <button onclick="waitingForEveryThingIsDoneRunning()">Create button event</button>
+
+
       <div id="post" >
         
       </div>
