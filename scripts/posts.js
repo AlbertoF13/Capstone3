@@ -16,7 +16,7 @@ class Posts {
         }
         })
         .then(response => response.json())
-        .then(result => {result.forEach(post => this.posts.push(new Post( post._id , post.text )))})
+        .then(result => {result.forEach(post => this.posts.push(new Post( post._id , post.text , post.createdAt)))})
         .then(result => this.displayPosts())
         .catch(error => console.log("error", error));
     }
@@ -33,9 +33,10 @@ class Posts {
 
 class Post {
 
-    constructor( id , text ) {
+    constructor( id , text , createdAt) {
         this.id = id
         this.text = text
+        this.createdAt = createdAt
         // console.log(this.id)
     }
 
