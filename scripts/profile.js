@@ -57,6 +57,7 @@ function createApost () {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
+   document.getElementById("postArea").value=" ";
 }
 
 

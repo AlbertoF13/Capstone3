@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <!-- Bootstrap CSS -->
@@ -21,70 +24,75 @@
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/scripts/auth.js"></script>
     <script>
-        if (isLoggedIn() === false) window.location.replace("/");
+        if (isLoggedIn() === false) window.location.replace("registration.html");
     </script>
+
+        <!-- Fontawesome link -->
+
+        <script src="https://kit.fontawesome.com/003bfe4dd9.js" crossorigin="anonymous"></script>
+
 
 </head>
 <body>
-    <header>
-        <nav class="navbar is-transparent">
-            <div class="navbar-brand">
-              <a class="navbar-item" href="login.html">
-                <img src="images/crud logo 2.png" alt="CRUD" width="112" height="28">
-              </a>
-              <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+  <header>
+    <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="login.html">
+            <img src="images/crud logo 2.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+          </a>
+          <div class="navbar-burger" data-target="navbarExampleTransparentExample">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="login.html">
+              Home
+            </a>
+
+            <a class="navbar-item" href="posts.html">
+                Blog Posts !
+            </a>
             </div>
+
           
-            <div id="navbarExampleTransparentExample" class="navbar-menu">
-              <div class="navbar-start">
-                <a class="navbar-item" href="login.html">
-                  Home
-                </a>
 
-                <a class="navbar-item" href="posts.html">
-                    Blog Posts !
-                </a>
-                </div>
-
-              
-
-                
             
-            </div>
+        
+        </div>
+          </div>
+      
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <p class="control">
+                  <a class="button is-dark"  target="_self" href="login.html" onclick= "logout()">
+                    <span class="icon">
+                      <i class="fa-solid fa-right-from-bracket"></i>
+                      <!-- data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" -->
+                    </span>
+                    <span>
+                      logout
+                    </span>
+                  </a>
+                </p>
+                <p class="control">
+                  <a class="button is-info" href="profile.html" >
+                      <span class="icon">
+                          <i class="fa-solid fa-user"></i>
+                      </span>
+                      <span>Profile</span>
+                  </a>
+              </p>
               </div>
-          
-              <div class="navbar-end">
-                <div class="navbar-item">
-                  <div class="field is-grouped">
-                    <p class="control">
-                      <a class="button is-dark"  target="_self" href="index.html" onclick= "logout()">
-                        <span class="icon">
-                          <i class="fab fa-twitter"></i>
-                          <!-- data-social-network="Twitter" data-social-action="tweet" data-social-target="https://bulma.io" -->
-                        </span>
-                        <span>
-                          logout
-                        </span>
-                      </a>
-                    </p>
-                    <p class="control">
-                      <a class="button is-info" href="profile.html" >
-                        <span class="icon">
-                          <i class="fas fa-download"></i>
-                        </span>
-                        <span>Profile</span>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </nav>
-    </header>
+          </div>
+        </div>
+      </nav>
+</header>
 
     <main>
       <button onclick="callApi2()"> call </button>
