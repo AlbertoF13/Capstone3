@@ -108,50 +108,8 @@ allposts.getPosts(1000 , 0)
 // console.log(singlepost)
 
 
-<<<<<<< Updated upstream
 
 
-// function liking(){
-//         const { token } = getLoginData();
-//         var myHeaders = new Headers();
-// myHeaders.append("Authorization", `Bearer ${token}`);
-// myHeaders.append("Content-Type", "application/json");
-
-// var raw = JSON.stringify({
-//   "postId": "63bf08714848e691b6ddfd03"
-// });
-
-// var requestOptions = {
-//   method: 'POST',
-//   headers: myHeaders,
-//   body: raw,
-//   redirect: 'follow'
-// };
-
-// fetch("https://microbloglite.herokuapp.com/api/likes", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error)); 
-// }
-
-// liking()
-
-=======
->>>>>>> Stashed changes
-// function callApi2() {
-//     const limit = 1000;
-//     const offset = 0;
-//     const { token } = getLoginData();
-//     fetch(`https://microbloglite.herokuapp.com/api/posts?limit=${limit}&offset=${offset}`, {
-//         method: "GET",
-//         headers: {
-//             Authorization: `Bearer ${token}`
-//         }
-//     })
-//     .then(response => response.json())
-//     .then(result => document.getElementById("post").innerHTML = result.map(postTemplate).join(" "))
-//     .catch(error => console.log("error", error));
-// }
 
 
 
