@@ -108,6 +108,7 @@ allposts.getPosts(1000 , 0)
 // console.log(singlepost)
 
 
+<<<<<<< Updated upstream
 
 
 // function liking(){
@@ -135,6 +136,8 @@ allposts.getPosts(1000 , 0)
 
 // liking()
 
+=======
+>>>>>>> Stashed changes
 // function callApi2() {
 //     const limit = 1000;
 //     const offset = 0;
