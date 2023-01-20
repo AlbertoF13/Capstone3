@@ -25,7 +25,6 @@ class Posts {
         document.getElementById("post").innerHTML = this.posts.map(post => postTemplate(post)).join(" ")
         this.posts.map(post => {
             let currentpost = document.getElementById(post.id)
-            console.log(post)
             currentpost.addEventListener("click" , function() {post.like()})
         })
     }
@@ -49,7 +48,7 @@ class Post {
         var raw = JSON.stringify({
             "postId": `${this.id}`
         });
-
+        console.log(raw);
         var requestOptions = {
         method: 'POST',
         headers: myHeaders,
